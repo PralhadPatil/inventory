@@ -1,5 +1,21 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+	div.container
+	.panel.panel-info
+	.panel-heading Items List
+		table.table
+			thead
+				tr 
+					th Head1
+					th Head2 
+					th Head3
+			tbody
+				each item in itemsList
+					tr
+						td #{item.itemId} 
+						td #{item.itemName} 
+						td #{item.vendorId} 
+
+		
+	
