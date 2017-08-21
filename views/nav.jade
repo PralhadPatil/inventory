@@ -11,36 +11,38 @@ nav.navbar.navbar-default.navbar-fixed-top.my-own-style
     // Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav
-        //li.active
-        //  a(href='#')
-        //    | Items
-        //    span.sr-only (current)
+        li.active
+          a(href='#')
+            | Items
+            span.sr-only (current)
+        li
+          a(href='#')
+            | Vendors
+            span.sr-only (current)
+        li
+          a(href='#')
+            | Sales Order
+            span.sr-only (current)
+        li
+          a(href='#')
+            | Purchase Order
+            span.sr-only (current)
         //li
           //a(href='#') Link
         li.dropdown
           a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-            | Items
+            | Actions
             span.caret
           ul.dropdown-menu
             li
-              a(href='#') Add
-        li.dropdown
-          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
-            | Vendor
-            span.caret
-          ul.dropdown-menu
+              a(href='#',data-toggle='modal', data-target='#createItem') Create Item
             li
-              a(href='#') Add
-            //li
-            //  a(href='#') Action
-            //li
-            //  a(href='#') Something else here
-            //li.divider(role='separator')
-            //li
-            //  a(href='#') Separated link
-            //li.divider(role='separator')
-            //li
-            //  a(href='#') One more separated link
+              a(href='#',data-toggle='modal', data-target='#createVendor') Create Vendor
+            li
+              a(href='#',data-toggle='modal', data-target='#createSalesOrder') Create Sales Order
+            li
+              a(href='#',data-toggle='modal', data-target='#createPurchaseOrder') Create Purchase Order
+
       form.navbar-form.navbar-left
         .form-group
           input.form-control(type='text', placeholder='Search')

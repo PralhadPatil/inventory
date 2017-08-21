@@ -1,0 +1,28 @@
+// Modal
+#createVendor.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      // Modal Header
+      .modal-header
+        button.close(type='button', data-dismiss='modal')
+          span(aria-hidden='true') ×
+          span.sr-only Close
+        h4#myModalLabel.modal-title
+          | Create Vendor
+      // Modal Body
+      .modal-body
+        form.form-horizontal(role='form')
+          .form-group
+            label.col-sm-2.control-label(for='inputEmail3') Email
+            .col-sm-10
+              input#inputEmail3.form-control(type='email', placeholder='Email')
+          .form-group
+            label.col-sm-2.control-label(for='inputPassword3') Password
+            .col-sm-10
+              input#inputPassword3.form-control(type='password', placeholder='Password')
+      // Modal Footer
+      .modal-footer
+        button.btn.btn-default(type='button', data-dismiss='modal')
+          | Close
+        button.btn.btn-primary(type='button')
+          | Save changes
